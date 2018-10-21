@@ -16,7 +16,7 @@ public class PaintersPartitioning {
 		for(int j = 1; j < workersLeft; j++) {
 			for(int i = 0; i < J.length; i++) {
 				int jj = j, ii = i;
-				M[i][j] = i < j ? M[i][j-1] : IntStream.rangeClosed(j, i).map(x -> Math.max(M[x-1][jj-1], IntStream.rangeClosed(x, ii).map(q -> J[q]).sum())).min().orElse(0);
+				M[i][j] = IntStream.rangeClosed(j, i).map(x -> Math.max(M[x-1][jj-1], IntStream.rangeClosed(x, ii).map(q -> J[q]).sum())).min().orElse(M[i][j-1]);
 			}
 		}
 		return M[J.length-1][workersLeft - 1];

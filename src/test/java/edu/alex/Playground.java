@@ -1,13 +1,18 @@
 package edu.alex;
 
-import java.util.Collections;
-import java.util.Stack;
+import java.util.function.Consumer;
+import java.util.stream.IntStream;
 
 public class Playground {
 
 	
 	public static void main(String[] args) {
-		Collections.reverse(new Stack<>());
+		
+		Consumer<Character> act = System.out::println;
+		act.accept("zzz".chars().mapToObj(i -> (char)i).iterator().next());
+		
+		System.out.println(IntStream.rangeClosed(5, 5).max().orElse(3));
+		//new TreeMap(); 
 		//Collections.
 		
 		//int q = Spliterator. OfInt. IMMUTABLE;
