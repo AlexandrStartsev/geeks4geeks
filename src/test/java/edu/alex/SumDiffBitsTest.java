@@ -9,6 +9,8 @@ public class SumDiffBitsTest {
 
 	@Test
 	public void test() {
+		System.out.println(this.getClass().getClassLoader());
+		
 		SumDiffBits logic = new SumDiffBits();
 		
 		assertEquals(60, logic.calc(new int[] {1, -1}));

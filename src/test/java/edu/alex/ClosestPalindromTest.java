@@ -9,6 +9,8 @@ public class ClosestPalindromTest {
 
 	@Test
 	public void test() {
+		System.out.println(this.getClass().getClassLoader());
+		
 		ClosestPalindrom logic = new ClosestPalindrom();
 		int []prem1 = {4, 5, 1, 0, 0, 0}, prem2 = {4, 5, 1, 6, 0, 0, 0};
 		
