@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class LRUCache {
 
+	//Test1
 	static class Impl {
 	    final Map<Integer, Integer> cache;
 	    final int maxCapacity;
